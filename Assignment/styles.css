@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: aqua;
+}
+/* Grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 0px;
+}
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.1s, color 0.1s;
+}
+/*Default colors*/
+.b1 { background-color: crimson; }
+.b2 { background-color: seagreen; }
+.b3 { background-color: royalblue; }
+.b4 { background-color: darkorange; }
+/*hover color ho*/
+.b1.hovered {
+    background-color: blueviolet;
+    color:black;
+    cursor: crosshair; 
+}
+.b2.hovered {
+    background-color: blue;
+    color:brown;
+    cursor: grab;
+}
+.b3.hovered {
+    background-color: purple;
+    color:yellowgreen;
+    cursor:pointer;
+}
+.b4.hovered {
+    background-color: brown;
+    color:yellow;
+    cursor:move;
+}
+.link-container {
+    margin-top: 30px;       
+    text-align: center;     
+}
+.link-container a {
+    text-decoration: none;
+    font-size: 18px;
+    color: darkblue;
+    transition: color 0.2s;
+}
+.link-container a:hover {
+    color: crimson;
+}
