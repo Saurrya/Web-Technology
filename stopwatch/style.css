@@ -17,8 +17,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-/* Top row */
 .top {
     width: 100%;
     display: flex;
@@ -36,7 +34,6 @@ body {
     border-radius: 12px;
 }
 
-/* Buttons */
 button {
     border: none;
     border-radius: 12px;
@@ -54,8 +51,6 @@ button:hover {
 .small-btn {
     width: clamp(60px, 10vw, 90px);
 }
-
-/* Middle row */
 .controls {
     width: 100%;
     display: flex;
@@ -79,7 +74,6 @@ button:hover {
     background: #d32f2f;
 }
 
-/* Bottom row */
 .laps {
     width: 100%;
     flex: 1;
@@ -89,8 +83,13 @@ button:hover {
     overflow-y: auto;
     font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
-
-/* Mobile tweaks */
+.link-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    padding: 0px;
+}
 @media (max-width: 600px) {
     .controls {
         flex-direction: column;
