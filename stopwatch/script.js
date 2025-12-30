@@ -17,12 +17,9 @@ function formatTime(ms) {
            `${String(seconds).padStart(2, '0')}.` +
            `${String(centiseconds).padStart(2, '0')}`;
 }
-
 function updateDisplay() {
     display.textContent = formatTime(time);
 }
-
-/* START */
 document.getElementById("start").onclick = () => {
     if (interval) return;
 
@@ -31,14 +28,10 @@ document.getElementById("start").onclick = () => {
         updateDisplay();
     }, 10);
 };
-
-/* STOP */
 document.getElementById("stop").onclick = () => {
     clearInterval(interval);
     interval = null;
 };
-
-/* RESET */
 document.getElementById("reset").onclick = () => {
     clearInterval(interval);
     interval = null;
@@ -47,20 +40,14 @@ document.getElementById("reset").onclick = () => {
     updateDisplay();
     lapsDiv.innerHTML = "";
 };
-
-/* +5 seconds */
 document.getElementById("add").onclick = () => {
     time += 5000;
     updateDisplay();
 };
-
-/* -5 seconds */
 document.getElementById("sub").onclick = () => {
     time = Math.max(0, time - 5000);
     updateDisplay();
 };
-
-/* LAP */
 document.getElementById("lap").onclick = () => {
     if (!interval) return;
 
